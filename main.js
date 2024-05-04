@@ -1,6 +1,7 @@
 const leM = document.querySelector("#Mtitre");
 const lewinner = document.querySelector("#scoreWinner");
 
+
 leM.addEventListener("click", function () {
     const bodynight = document.querySelector("body");
     if (bodynight.classList.contains("bodyNight")) {
@@ -38,6 +39,24 @@ leOv.addEventListener("click", function () {
 const caseSelect = document.querySelectorAll(".cell");
 let clickSouris = 0;
 lewinner.classList.add("nodisplay");
+const scoreStarsM = document.querySelectorAll(".starM")
+const scoreStarsB = document.querySelectorAll(".starB")
+let nbrStarsM=0;
+let nbrStarsB=0;
+
+
+lewinner.addEventListener("click", function () {
+    lewinner.classList.add("nodisplay");
+    for (let i = 0; i < caseSelect.length; i++) {
+        caseSelect[i].classList.remove("caseMario", "caseBowser")
+        caseSelect[i].values = undefined;
+
+
+
+    }
+    clickSouris = 0;
+
+})
 
 
 for (let i = 0; i < caseSelect.length; i++) {
@@ -93,16 +112,20 @@ for (let i = 0; i < caseSelect.length; i++) {
         let ligne7 = caseSelect[0].values + caseSelect[4].values + caseSelect[8].values;
         let ligne8 = caseSelect[2].values + caseSelect[4].values + caseSelect[6].values;
 
+        
 
-
-
+        
+        
 
         if (ligne1 === "MMM" || ligne2 === "MMM" || ligne3 === "MMM" || ligne4 === "MMM" || ligne5 === "MMM" || ligne6 === "MMM" || ligne7 === "MMM" || ligne8 === "MMM") {
             console.log("mario win");
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Mario Win";
             clickSouris = 10;
+            scoreStarsM[nbrStarsM].style.filter = "brightness(1)";
+            nbrStarsM++;
 
+                
 
         };
 
@@ -112,6 +135,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Bowser Win";
             clickSouris = 10;
+            scoreStarsB[nbrStarsB].style.filter = "brightness(1)";
+            nbrStarsB++;
         };
 
 
@@ -121,6 +146,36 @@ for (let i = 0; i < caseSelect.length; i++) {
             clickSouris++;
 
         }
+
+        if (nbrStarsM == 3) {
+            lewinner.innerHTML ="mario est Vainqueur"
+            
+
+            lewinner.addEventListener("click", function(){
+                location.reload(true);
+
+            })
+
+           
+            
+        }
+
+        if (nbrStarsB == 3) {
+            lewinner.innerHTML ="Bowser est Vainqueur"
+
+            lewinner.addEventListener("click", function(){
+                location.reload(true);
+
+            })
+
+           
+            
+        }
+
+
+
+
+
 
 
 
