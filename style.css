@@ -311,7 +311,7 @@ p{
     position: absolute;
     width: 306px;
     height: 306px;
-
+text-align: center;
     font-size: 2em;
     background-color: #3f5f7c;
     padding: 20px;
