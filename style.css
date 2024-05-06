@@ -314,9 +314,7 @@ p{
 text-align: center;
     font-size: 2em;
     background-color: #3f5f7c;
-    padding: 20px;
     border: 8px outset #104a96;
-    margin: 0;
     border-radius: 8px;
     z-index: 3;
 }
