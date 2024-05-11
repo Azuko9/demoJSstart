@@ -37,6 +37,7 @@ leN.addEventListener("click", function () {
 
 
 const caseSelect = document.querySelectorAll(".cell");
+const tourJoueur = document. querySelectorAll(".playerActive");
 let clickSouris = 0;
 lewinner.classList.add("nodisplay");
 const scoreStarsM = document.querySelectorAll(".starM")
@@ -45,10 +46,13 @@ let nbrStarsM=0;
 let nbrStarsB=0;
 
 
+
+
 lewinner.addEventListener("click", function () {
     lewinner.classList.add("nodisplay");
     for (let i = 0; i < caseSelect.length; i++) {
-        caseSelect[i].classList.remove("caseMario", "caseBowser")
+        caseSelect[i].classList.remove("caseMario", "caseBowser");
+        tourJoueur[0].classList.add("playerBoomboom");
         caseSelect[i].values = undefined;
 
 
@@ -63,20 +67,24 @@ for (let i = 0; i < caseSelect.length; i++) {
 
 
     caseSelect[i].addEventListener("click", function () {
-        console.log(caseSelect[i].values)
-        console.log(clickSouris);
+
 
         if (caseSelect[i].values == undefined) {
             clickSouris++;
             if (clickSouris == 1 || clickSouris == 3 || clickSouris == 5 || clickSouris == 7 || clickSouris == 9) {
                 caseSelect[i].classList.add("caseMario");
                 caseSelect[i].values = "M";
+                tourJoueur[0].classList.remove("playerBoomboom")
+                tourJoueur[1].classList.add("playerBoomboom");
+                console.log(tourJoueur);
 
             }
 
             if (clickSouris == 2 || clickSouris == 4 || clickSouris == 6 || clickSouris == 8) {
                 caseSelect[i].classList.add("caseBowser");
                 caseSelect[i].values = "B";
+                tourJoueur[1].classList.remove("playerBoomboom");
+                tourJoueur[0].classList.add("playerBoomboom");
 
             }
 
@@ -123,6 +131,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             lewinner.innerHTML = "Mario Win";
             lewinner.classList.add("marioWin");
             lewinner.classList.remove("bowsrWin", "matchNul");
+            tourJoueur[0].classList.remove("playerBoomboom");
+            tourJoueur[1].classList.remove("playerBoomboom");
             clickSouris = 10;
             scoreStarsM[nbrStarsM].style.filter = "brightness(1)";
             nbrStarsM++;
@@ -138,6 +148,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             lewinner.innerHTML = "Bowser Win";
             lewinner.classList.add("bowserWin");
             lewinner.classList.remove("marioWin", "matchNul");
+            tourJoueur[0].classList.remove("playerBoomboom");
+            tourJoueur[1].classList.remove("playerBoomboom");
             clickSouris = 10;
             scoreStarsB[nbrStarsB].style.filter = "brightness(1)";
             nbrStarsB++;
@@ -148,6 +160,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Match NUL";
             lewinner.classList.remove("marioWin","bowsrWin");
+            tourJoueur[0].classList.remove("playerBoomboom");
+            tourJoueur[1].classList.remove("playerBoomboom");
             lewinner.classList.add("matchNul");
             clickSouris++;
 
@@ -156,6 +170,8 @@ for (let i = 0; i < caseSelect.length; i++) {
         if (nbrStarsM == 3) {
             lewinner.innerHTML ="mario est Vainqueur"
             lewinner.classList.remove("bowsrWin", "matchNul");
+            tourJoueur[0].classList.remove("playerBoomboom");
+            tourJoueur[1].classList.remove("playerBoomboom");
             lewinner.classList.add("marioWin");
             lewinner.addEventListener("click", function(){
                 location.reload(true);
@@ -169,6 +185,8 @@ for (let i = 0; i < caseSelect.length; i++) {
         if (nbrStarsB == 3) {
             lewinner.innerHTML ="Bowser est Vainqueur"
             lewinner.classList.remove("marioWin", "matchNul");
+            tourJoueur[0].classList.remove("playerBoomboom");
+            tourJoueur[1].classList.remove("playerBoomboom");
             lewinner.classList.add("bowserWin");
             lewinner.addEventListener("click", function(){
                 location.reload(true);

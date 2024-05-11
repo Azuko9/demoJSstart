@@ -341,3 +341,12 @@ p{
     display: none;
 }
 
+@keyframes boomboom {
+    from { transform: scale(0.8); }
+    to   { transform: scale(1.2); }
+  }
+
+.playerBoomboom {
+    animation:  0.5s linear  boomboom infinite alternate;
+    color:#4AB23B;
+}
