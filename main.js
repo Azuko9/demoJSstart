@@ -13,9 +13,9 @@ leM.addEventListener("click", function () {
 
 });
 
-const leOv = document.querySelector("#leOvert");
+const leN = document.querySelector("#leN");
 
-leOv.addEventListener("click", function () {
+leN.addEventListener("click", function () {
     const mHD = document.querySelector("#mario");
     const bHD = document.querySelector("#bowser");
 
