@@ -121,6 +121,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             console.log("mario win");
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Mario Win";
+            lewinner.classList.add("marioWin");
+            lewinner.classList.remove("bowsrWin", "matchNul");
             clickSouris = 10;
             scoreStarsM[nbrStarsM].style.filter = "brightness(1)";
             nbrStarsM++;
@@ -134,6 +136,8 @@ for (let i = 0; i < caseSelect.length; i++) {
             console.log("Bowser win");
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Bowser Win";
+            lewinner.classList.add("bowserWin");
+            lewinner.classList.remove("marioWin", "matchNul");
             clickSouris = 10;
             scoreStarsB[nbrStarsB].style.filter = "brightness(1)";
             nbrStarsB++;
@@ -143,14 +147,16 @@ for (let i = 0; i < caseSelect.length; i++) {
         if (clickSouris == 9) {
             lewinner.classList.remove("nodisplay");
             lewinner.innerHTML = "Match NUL";
+            lewinner.classList.remove("marioWin","bowsrWin");
+            lewinner.classList.add("matchNul");
             clickSouris++;
 
         }
 
         if (nbrStarsM == 3) {
             lewinner.innerHTML ="mario est Vainqueur"
-            
-
+            lewinner.classList.remove("bowsrWin", "matchNul");
+            lewinner.classList.add("marioWin");
             lewinner.addEventListener("click", function(){
                 location.reload(true);
 
@@ -162,7 +168,8 @@ for (let i = 0; i < caseSelect.length; i++) {
 
         if (nbrStarsB == 3) {
             lewinner.innerHTML ="Bowser est Vainqueur"
-
+            lewinner.classList.remove("marioWin", "matchNul");
+            lewinner.classList.add("bowserWin");
             lewinner.addEventListener("click", function(){
                 location.reload(true);
 

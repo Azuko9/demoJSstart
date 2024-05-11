@@ -311,15 +311,32 @@ p{
     position: absolute;
     width: 306px;
     height: 306px;
-text-align: center;
+    text-align: center;
     font-size: 2em;
     background-color: #3f5f7c;
     border: 8px outset #104a96;
     border-radius: 8px;
+    padding-top: 10px;
     z-index: 3;
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 
+.bowserWin{
+    background-image: url(/img/bowser2.gif) ;
+}
+
+.marioWin{
+    background-image: url(/img//marioWin.gif) ;
+}
+
+
+.matchNul{
+    background-image: url(/img/Mechakoopa.webp);
+}
 .nodisplay{
     display: none;
 }
