@@ -42,7 +42,16 @@ div #titreMorpion{
     justify-content: center;
     z-index: 1;
 
+
     
+}
+
+#Mtitre{
+    cursor: url(./img/marioPointer.png),auto;
+}
+
+#Ntitre{
+    cursor: url(./img/marioPointer.png),auto;
 }
 
 .leTitre{
@@ -112,7 +121,7 @@ header{
     padding: 5px;
     margin: 10px;
     box-shadow:50px 30px 4px rgba(0, 0, 0, 0.8); 
-    cursor: url(./img/marioPointer.png),auto;
+   
     
 }
 
@@ -348,5 +357,52 @@ p{
 
 .playerBoomboom {
     animation:  0.5s linear  boomboom infinite alternate;
+    
+}
+.playerColor {
     color:#4AB23B;
+}
+
+
+.zoneRob{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.robot{
+    width: auto;
+    height: 40px;
+    
+
+}
+
+.boutonRob{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: grey;
+    border-radius: 15px;
+    border: solid black 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(74, 70, 73, 0.6);
+    box-shadow:  2px 1px rgba(0, 0, 0, 0.8);
+    color: red;
+    cursor: url(./img/marioPointer.png),auto;
+
+}
+
+.boutonRobON{
+box-shadow: inset 1px 1px rgba(0, 0, 0, 0.8);
+color: greenyellow;
+
+}
+
+.material-symbols-outlined {
+ font-size: 20px;
+ 
+
 }

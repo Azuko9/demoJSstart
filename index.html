@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
+
     <script defer src="./main.js"></script>
     <title>Document</title>
 </head>
@@ -12,7 +15,7 @@
 <body>
     <header>
         <div>
-            
+
             <div class="vis">
                 <div class="têtevis"></div>
             </div>
@@ -24,15 +27,15 @@
             <h1 class="titre rightText">super</h1>
             <div id="titreMorpion">
                 <p id="Mtitre" class="titre v2 rotate textRouge">m</p>
-                <p  class="titre v2 invert textVert">o</p>
+                <p class="titre v2 invert textVert">o</p>
                 <p class="titre v2 rotate textJaune">r</p>
                 <p class="titre v2 invert textBleu">p</p>
                 <p class="titre v2 rotate textVert">i</p>
                 <p class="titre v2 invert textRouge">o</p>
-                <p id="leN" class="titre v2 rotate textJaune">n</p>
+                <p id="Ntitre" class="titre v2 rotate textJaune">n</p>
 
-            </div >
-            <p class="titre leftText">bross</p>
+            </div>
+            <p class="titre leftText">bros</p>
         </div>
         <div>
             <div class="vis">
@@ -45,7 +48,7 @@
     </header>
 
     <nav id="letsGo">
-        
+
         <div>
             <div class="vis">
                 <div class="têtevis"></div>
@@ -55,8 +58,20 @@
             </div>
         </div>
         <div class="player">
-            <h2 class="titre playerActive playerBoomboom"> Mario</h2>
+            <h2 class="titre playerActive playerBoomboom playerColor"> Mario</h2>
+            <div class="zoneRob">
+
+                <img id="robotM" class="robot" src="./img/ROB.png" alt="">
+                <div id="boutonRobM" class="boutonRob">
+                    <div><span class="material-symbols-outlined">
+                        power_settings_new
+                    </span></div>
+                    
+                </div>
+            </div>
             <div id="mario" class="marioPX"></div>
+
+
         </div>
         <div class="blockgame">
             <h1 id="scoreWinner" class="titre"></h1>
@@ -73,11 +88,15 @@
 
         <div class="player">
             <h2 class="titre playerActive"> Bowser</h2>
-            <!-- <div class="selection"> 
-             <div class="playerSelect"></div>
-             <div class="cpu"></div> 
-            </div>-->
-            
+            <div class="zoneRob">
+
+                <img id="robotB" class="robot" src="./img/ROB.png" alt="">
+                <div id="boutonRobB" class="boutonRob boutonRobON">
+                    <span class="material-symbols-outlined">
+                        power_settings_new
+                    </span>
+                </div>
+            </div>
             <div id="bowser" class="bowserPX"></div>
         </div>
 
@@ -89,7 +108,7 @@
                 <div class="têtevis"></div>
             </div>
         </div>
-        
+
 
     </nav>
 
@@ -102,7 +121,7 @@
                 <div class="têtevis"></div>
             </div>
         </div>
-        
+
         <div id="scoreWin">
             <div class="starM"></div>
             <div class="starM"></div>
@@ -112,7 +131,7 @@
             <div class="starB"></div>
             <div class="starB"></div>
         </div>
-<div>
+        <div>
             <div class="vis">
                 <div class="têtevis"></div>
             </div>
