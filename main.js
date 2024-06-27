@@ -96,7 +96,7 @@ lewinner.addEventListener("click", function () {
 
 
 
-//comportement du jeu au click de souris.
+//comportement du jeu.
 for (let i = 0; i < caseSelect.length; i++) {
 
     caseSelect[i].addEventListener("mouseenter",function (e) {
